@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+  
+<!--  <Target Name="Production" Condition="$(Game) == 'Pong'" BeforeTargets="Build">-->
+<!--    <Message Importance="high" Text="Ping!" />-->
+<!--  </Target>-->
+
+<!--  <Target Name="Development" Condition="$(Game) == 'Ping'" BeforeTargets="Build">-->
+<!--    <Message Importance="high" Text="Pong!" />-->
+<!--  </Target>-->
+  <!-- App Settings -->
+<!--  <ItemGroup>-->
+<!--    <Content Remove="appsettings*.json" />-->
+<!--  </ItemGroup>-->
+<!--  <ItemGroup>-->
+<!--    <Content Include="appsettings.*.json" CopyToOutputDirectory="Always" />-->
+<!--&lt;!&ndash;    <Content Include="appsettings.$(ASPNETCORE_ENVIRONMENT).json" DependentUpon="appsettings.json" CopyToOutputDirectory="Always" />&ndash;&gt;-->
+<!--  </ItemGroup>-->
+  <ItemGroup>
+    <PackageReference Include="Marvin.Cache.Headers" Version="6.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="WireMock.Net" Version="1.4.40" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Berkeleys" />
+    <Folder Include="Controllers\Berkeleys\v1\3D Secure" />
+    <Folder Include="Controllers\Berkeleys\v1\CardIssuing\Transfers" />
+    <Folder Include="Controllers\Berkeleys\v1\DebtCollections" />
+    <Folder Include="Controllers\Berkeleys\v1\DirectSend" />
+    <Folder Include="Controllers\Berkeleys\v1\Secure" />
+    <Folder Include="Controllers\CentralPayments\v1\BulkCards" />
+    <Folder Include="Controllers\CentralPayments\v1\CardHolder" />
+    <Folder Include="Controllers\CentralPayments\v1\Cards" />
+    <Folder Include="Controllers\CentralPayments\v1\CardStatements" />
+    <Folder Include="Controllers\CentralPayments\v1\Connectivity" />
+    <Folder Include="Controllers\CentralPayments\v1\Transactions" />
+    <Folder Include="Logs" />
+    <Folder Include="wwwroot\css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\core\MockBank.Application\MockBank.Application.csproj" />
+    <ProjectReference Include="..\..\infrastructure\MockBank.Data\MockBank.Data.csproj" />
+  </ItemGroup>
+
+</Project>

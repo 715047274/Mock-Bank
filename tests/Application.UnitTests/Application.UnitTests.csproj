@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="CountryData.Bogus" Version="3.73.0" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0-preview.4.22229.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="xunit" Version="2.4.2-pre.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\core\MockBank.Application\MockBank.Application.csproj" />
+    <ProjectReference Include="..\..\src\core\MockBank.Domain\MockBank.Domain.csproj" />
+    <ProjectReference Include="..\..\src\infrastructure\MockBank.Data\MockBank.Data.csproj" />
+  </ItemGroup>
+
+</Project>

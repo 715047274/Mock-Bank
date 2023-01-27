@@ -1,0 +1,9 @@
+﻿<Project>
+  <PropertyGroup>
+    <Product>Berkeleys Mock</Product>
+    <Description>Berkeleys Mock Service</Description>
+    <Team>Dayforce Wallet</Team>
+    <AssemblyTitle>$(Product)</AssemblyTitle>
+  </PropertyGroup>
+  <Import Project="$(MSBuildThisFileDirectory)\Directory.Build.Template.props" Condition="'$(TF_BUILD)' != ''"/>
+</Project>
