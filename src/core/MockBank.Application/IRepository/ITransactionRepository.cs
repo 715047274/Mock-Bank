@@ -7,8 +7,8 @@ namespace MockBank.Application.IRepository
 {
     public interface ITransactionRepository:  IGenericRepository<Transaction>
     {
-        public Task<List<Transaction>> GetTransactionsByAccountId(int accountId, [CanBeNull] string startDate,
-            [CanBeNull] string endDate, int limit = 50, int offset = 0);
+        public Task<List<Transaction>> GetTransactionsByAccountId(int accountId, string? startDate,
+            string? endDate, int limit = 50, int offset = 0);
 
         public Task<List<Transaction>> GetListValueLoadsByProgramId(int programId, string externalTag,
             int limit = 50, int offset = 0);

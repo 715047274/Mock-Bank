@@ -16,7 +16,8 @@ namespace MockBank.Application
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
           // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
-          services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<>)); 
+          //
+          // services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<>)); 
           services.AddTransient(typeof(IPipelineBehavior<,>), typeof(MockScenarioBehaviour<,>));
         
             return services;

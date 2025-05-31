@@ -35,5 +35,10 @@ namespace MockBank.Application.Configurations.Common.Behaviours
 
             return await next();
         }
+
+        public Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

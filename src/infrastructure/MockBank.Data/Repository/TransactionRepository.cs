@@ -138,8 +138,8 @@ namespace MockBank.Data
             throw new NotImplementedException();
         }
 
-        public async Task<List<Transaction>> GetTransactionsByAccountId(int accountId, [CanBeNull] string startDate,
-            [CanBeNull] string endDate, int limit = 50, int offset = 0)
+        public async Task<List<Transaction>> GetTransactionsByAccountId(int accountId,   string? startDate,
+          string? endDate, int limit = 50, int offset = 0)
         {
             var transcations =
                 await Connection.QueryAsync<Transaction, Merchant, TransactionCode, ProcessorEvent, Transaction>(

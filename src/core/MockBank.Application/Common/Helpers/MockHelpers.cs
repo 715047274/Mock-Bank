@@ -58,7 +58,7 @@ namespace MockBank.Application.Common.Helpers
         }
 
         public static Transaction GenerateValueLoadTransaction(int accountId, int amount, int processorId,
-            string externalTag, [CanBeNull] string idempotencyKey)
+            string externalTag, string? idempotencyKey)
         {
             // generate Process 
             // Create Process with Message, action Message, delay timeout, 

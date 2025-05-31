@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace MockBank.Application.Configurations.Common.Behaviours
 {
+    /*
     public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
     {
         private readonly ILogger _logger;
@@ -28,7 +29,7 @@ namespace MockBank.Application.Configurations.Common.Behaviours
         }
         
     }
-    
+    */
     // TODO use the Mediator Pipeline 
     // public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     // {

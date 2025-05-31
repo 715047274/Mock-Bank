@@ -40,8 +40,8 @@ namespace Application.UnitTests
                 address2 = _faker.Address.FullAddress(),
                 city = _faker.Address.City(),
                 postal_code = _faker.Random.Replace("?#? #?#"),
-                state = _faker.Country().Canada().Province().Name,
-                country = _faker.Country().Canada().Name,
+                // state = _faker.Country().Canada().Province().Name,
+                // country = _faker.Country().Canada().Name,
                 updated_at = DateTime.Now
             };
         }
@@ -105,7 +105,7 @@ namespace Application.UnitTests
         }
 
         public Transaction GenerateValueLoadTransaction(int accountId, int amount, int processorId, string externalTag,
-            [CanBeNull] string idempotencyKey)
+             string? idempotencyKey)
         {
             // generate Process 
             // Create Process with Message, action Message, delay timeout, 

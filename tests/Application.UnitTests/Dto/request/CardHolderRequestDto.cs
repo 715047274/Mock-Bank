@@ -18,6 +18,6 @@ namespace Application.UnitTests.Dto
         public AddressDto shipping_address { get; set; }
         public double? load_amount { get; set; }
         public int? linked_account_id { get; set; }
-        [CanBeNull] public string subprogram_code { get; set; }
+        public string? subprogram_code { get; set; }
     }
 }
